@@ -67,7 +67,7 @@ const Footer = () => {
             </form>
           ) : (
             <SuccessMsg>
-              Awesome! We'll keep you posted on future updates.
+              Awesome! We&apos;ll keep you posted on future updates.
             </SuccessMsg>
           )}
         </TextContainer>
