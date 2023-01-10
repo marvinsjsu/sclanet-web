@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { COLORS } from '../../constants/colors';
 
-const Footer = () => {
+const Footer = React.forwardRef((props, ref) => {
 
   const [isSent, setIsSent] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -41,7 +41,7 @@ const Footer = () => {
   };
 
   return (
-    <OuterWrapper>
+    <OuterWrapper ref={ref}>
       <Wrapper>
         <AnimatedLogo src="/animated-logo.gif" alt="Sclanet logo" />
         <TextContainer>
@@ -74,7 +74,7 @@ const Footer = () => {
       </Wrapper>
     </OuterWrapper>
   );
-};
+});
 
 const OuterWrapper = styled.div`
   background-color: rgb(45,42,39);

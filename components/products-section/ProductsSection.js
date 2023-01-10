@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 import { COLORS } from '../../constants/colors';
 
-const ProductsSection = () => {
+
+const ProductsSection = React.forwardRef((props, ref) => {
   return (
-    <OuterWrapper>
+    <OuterWrapper ref={ref}>
       <Wrapper>
         <SclanetLogo src="/sclanet-transparent.png" alt="Sclanet logo" />
         <BracketImg src="/bracket.png" alt="bracket image" />
@@ -41,7 +42,7 @@ const ProductsSection = () => {
       </Wrapper>
     </OuterWrapper>
   );
-};
+});
 
 
 const OuterWrapper = styled.div`

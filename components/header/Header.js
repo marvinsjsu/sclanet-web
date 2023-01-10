@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { COLORS } from '../../constants/colors';
 
-const Header = () => {
+const Header = ({ onClickProducts, onClickAbout, onClickContact }) => {
   return (
     <Wrapper>
       <Logo
@@ -19,13 +19,13 @@ const Header = () => {
       <Nav>
         <NavList>
           <NavListItem>
-            <NavLink href='/'>Products</NavLink>
+            <NavLink onClick={onClickProducts}>Products</NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink href='/'>About</NavLink>
+            <NavLink onClick={onClickAbout}>About</NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink href='/'>Contact</NavLink>
+            <NavLink onClick={onClickContact}>Contact</NavLink>
           </NavListItem>
         </NavList>
       </Nav>
@@ -111,14 +111,19 @@ const NavListItem = styled.li`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.button`
   color: rgb(45,42,39);
   padding: 16px 0;
   text-decoration: none;
+  border: none;
+  background-color: white;
+  padding: 0;
+  margin: 0;
 
   &:hover {
     font-weight: 600;
     color: ${COLORS.purple};
+    cursor: pointer;
   }
 `;
 

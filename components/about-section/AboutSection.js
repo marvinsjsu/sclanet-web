@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import { COLORS } from '../../constants/colors';
 
-const AboutSection = () => {
+const AboutSection = React.forwardRef((props, ref) => {
   return (
-    <OuterWrapper>
+    <OuterWrapper ref={ref}>
       <Wrapper>
         <TextWrapper>
           <MainText>
@@ -22,7 +22,7 @@ const AboutSection = () => {
       </Wrapper>
     </OuterWrapper>
   );
-};
+});
 
 const OuterWrapper = styled.div`
   background-color: ${COLORS.purple};

@@ -1,21 +1,48 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-
-// import styled from 'styled-components';
+import React, { useState } from 'react';
+import Head from 'next/head';
 
 import Header from '../components/header';
-// import MainBanner from '../components/main-banner';
 import Banner from '../components/banner';
 import ProductsSection from '../components/products-section';
-// import BenefitsSection from '../components/benefits-section';
 import AboutSection from '../components/about-section';
 import Footer from '../components/footer';
 import Copyright from '../components/copyright';
 import GlobalStyle from '../components/global-style';
 
-const inter = Inter({ subsets: ['latin'] })
+import { SECTIONS } from '../constants';
 
 export default function Home() {
+
+  const productsRef = React.useRef(null);
+  const aboutRef = React.useRef(null);
+  const contactRef = React.useRef(null);
+
+  const [currSection, setCurrSection] = useState(null);
+
+  const scrollOptions = {
+    behavior: 'smooth',
+    inline: 'center',
+    block: 'start',
+  };
+
+  const onClickContact = (evt) => {
+    evt.preventDefault();
+    contactRef.current.scrollIntoView(scrollOptions);
+    setCurrSection(SECTIONS.CONTACT);
+  };
+
+  const onClickProducts = (evt) => {
+    evt.preventDefault();
+    productsRef.current.scrollIntoView(scrollOptions);
+    setCurrSection(SECTIONS.PRODUCTS);
+  };
+
+  const onClickAbout = (evt) => {
+    evt.preventDefault();
+    aboutRef.current.scrollIntoView(scrollOptions);
+    setCurrSection(SECTIONS.ABOUT);
+  };
+
   return (
     <>
       <Head>
@@ -26,12 +53,16 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
-      <Header />
+      <Header
+        onClickProducts={onClickProducts}
+        onClickAbout={onClickAbout}
+        onClickContact={onClickContact}      
+      />
       <Banner />
-      <ProductsSection />
+      <ProductsSection ref={productsRef}/>
       {/* <BenefitsSection /> */}
-      <AboutSection />
-      <Footer />
+      <AboutSection ref={aboutRef}/>
+      <Footer ref={contactRef}/>
       <Copyright />
       <GlobalStyle />
     </>
