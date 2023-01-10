@@ -33,6 +33,7 @@ const Wrapper = styled.section`
   width: 100%;
   max-width: 1440px;
   padding: 80px 24px;
+  margin: 0 auto;
 
   @media screen and (min-width: 550px) {
     display: flex;

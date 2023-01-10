@@ -57,6 +57,7 @@ const Wrapper = styled.main`
   width: 100%;
   max-width: 1440px;
   padding: 48px 24px 64px;
+  margin: 0 auto;
 
   @media screen and (min-width: 550px) {
     padding: 100px 64px;
@@ -70,7 +71,6 @@ const Wrapper = styled.main`
 const SclanetLogo = styled.img`
   margin: 0 auto;
   height: 80px;
-  margin-bottom: 32px;
 
   @media screen and (min-width: 650px) {
     margin-bottom: 16px;    
@@ -80,8 +80,10 @@ const SclanetLogo = styled.img`
 const ProductDivContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 48px;
 
   @media screen and (min-width: 650px) {
+    margin-top: 16px;
     align-items: center;
   }
 
@@ -119,11 +121,6 @@ const MoreToCome = styled.p`
   font-size: 1.2rem;
   width: fit-content;
   margin: 12px 0;
-
-  /* &:hover {
-    font-weight: 700;
-    cursor: pointer;
-  } */
 `;
 
 const ToroLogoPlaceholder = styled.p`

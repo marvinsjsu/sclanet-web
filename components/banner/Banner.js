@@ -31,6 +31,7 @@ const Wrapper = styled.main`
   width: 100%;
   max-width: 1440px;
   padding: 40px 24px;
+  margin: 0 auto;
   margin-bottom: 48px;
 
   @media screen and (min-width: 550px) {

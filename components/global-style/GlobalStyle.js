@@ -30,7 +30,8 @@ const GlobalStyle = createGlobalStyle`
   */
   body {
     line-height: 1.5;
-    max-width: 1440px;
+    width: 100%;
+    /* max-width: 1440px; */
     -webkit-font-smoothing: antialiased;
   }
 
