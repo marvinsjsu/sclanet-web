@@ -84,4 +84,6 @@ const ReportingImg = styled.img`
   }
 `;
 
+AboutSection.displayName = 'AboutSection';
+
 export default AboutSection;

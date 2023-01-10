@@ -210,4 +210,6 @@ const ErrorMsg = styled.div`
   text-align: center;
 `
 
+Footer.displayName = 'Footer';
+
 export default Footer;

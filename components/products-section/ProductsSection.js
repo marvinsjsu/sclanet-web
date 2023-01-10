@@ -143,5 +143,6 @@ const BracketImg = styled.img`
   }
 `;
 
+ProductsSection.displayName = 'ProductsSection';
 
 export default ProductsSection;
