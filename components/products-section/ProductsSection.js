@@ -70,7 +70,11 @@ const Wrapper = styled.main`
 const SclanetLogo = styled.img`
   margin: 0 auto;
   height: 80px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 650px) {
+    margin-bottom: 16px;    
+  }
 `;
 
 const ProductDivContainer = styled.div`
