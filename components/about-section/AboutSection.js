@@ -12,8 +12,8 @@ const AboutSection = React.forwardRef((props, ref) => {
             Helping companies untangle value
           </MainText>
           <SecondaryText>
-            We’re readying our solutions, powered by SaaS and Robotics capabilities, to 
-            accelerate radical growth for global businesses. We’re employing the latest 
+            We&apos;re readying our solutions, powered by SaaS and Robotics capabilities, to 
+            accelerate radical growth for global businesses. We&apos;re employing the latest 
             technology and partnering with outstanding teams to help enterprises embrace 
             change—making a world of difference.
           </SecondaryText>
