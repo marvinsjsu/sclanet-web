@@ -9,7 +9,7 @@ import Banner from '../components/banner';
 import ProductsSection from '../components/products-section';
 // import BenefitsSection from '../components/benefits-section';
 import AboutSection from '../components/about-section';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 import GlobalStyle from '../components/global-style';
 
 const inter = Inter({ subsets: ['latin'] })
